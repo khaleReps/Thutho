@@ -1,0 +1,114 @@
+{% load static %}
+
+
+<div class="navbar navbar-expand-sm navbar-mini navbar-dark fixed-bottom bg-dark d-none d-md-flex p-0" id="demo-navbar">
+  <div class="container">
+
+      <!-- Main Navigation -->
+      <ul class="nav navbar-nav flex-nowrap">
+          <li class="nav-item dropup">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Catalog</a>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{% url 'index' %}">Home page</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'library' %}">Library</a>
+                  <a class="dropdown-item" href="{% url 'library-featured' %}">Featured</a>
+                  <a class="dropdown-item" href="{% url 'library-development' %}">Development</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'library-filters' %}">Explore</a>
+                  <a class="dropdown-item" href="{% url 'library-filters-list' %}">Explore List</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'paths' %}">Learning Paths</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'course' %}">Course Details</a>
+                  <a class="dropdown-item" href="{% url 'lesson' %}">Lesson Details</a>
+                  <a class="dropdown-item" href="{% url 'path' %}">Path Details</a>
+              </div>
+          </li>
+          <li class="nav-item dropup">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Student</a>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{% url 'student-dashboard' %}">Dashboard</a>
+                  <a class="dropdown-item" href="{% url 'student-my-courses' %}">My Courses</a>
+                  <a class="dropdown-item" href="{% url 'student-take-course' %}">Take Course</a>
+                  <a class="dropdown-item" href="{% url 'student-take-lesson' %}">Take Lesson</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'student-take-quiz' %}">Take Quiz</a>
+                  <a class="dropdown-item" href="{% url 'student-quiz-result-details' %}">Quiz Result</a>
+                  <a class="dropdown-item" href="{% url 'student-quiz-results' %}">My Quizzes</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'student-path-assessment' %}">Skill Assessment</a>
+                  <a class="dropdown-item" href="{% url 'student-path-assessment-result' %}">Skill Result</a>
+              </div>
+          </li>
+          <li class="nav-item dropup">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Instructor</a>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{% url 'instructor-dashboard' %}">Dashboard</a>
+                  <a class="dropdown-item" href="{% url 'instructor-courses' %}">Courses</a>
+                  <a class="dropdown-item" href="{% url 'instructor-quizzes' %}">Quizzes</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'instructor-edit-course' %}">Edit Course</a>
+                  <a class="dropdown-item" href="{% url 'instructor-edit-quiz' %}">Edit Quiz</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'instructor-earnings' %}">Earnings</a>
+                  <a class="dropdown-item" href="{% url 'instructor-statement' %}">Statement</a>
+              </div>
+          </li>
+          <li class="nav-item dropup">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community</a>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{% url 'student-discussions' %}">Discussions</a>
+                  <a class="dropdown-item" href="{% url 'student-discussion' %}">Discussion Details</a>
+                  <a class="dropdown-item" href="{% url 'student-discussions-ask' %}">Ask Question</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'student-profile' %}">Student Profile</a>
+                  <a class="dropdown-item" href="{% url 'instructor-profile' %}">Instructor Profile</a>
+              </div>
+          </li>
+          <li class="nav-item dropup active">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="{% url 'pricing' %}">Pricing</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item active" href="{% url 'login' %}">Login</a>
+                  <a class="dropdown-item" href="{% url 'signup' %}">Signup</a>
+                  <a class="dropdown-item" href="{% url 'signup-payment' %}">Payment</a>
+                  <a class="dropdown-item" href="{% url 'reset-password' %}">Reset Password</a>
+                  <a class="dropdown-item" href="{% url 'change-password' %}">Change Password</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'student-edit-account' %}">Edit Account</a>
+                  <a class="dropdown-item" href="{% url 'student-edit-account-profile' %}">Profile &amp; Privacy</a>
+                  <a class="dropdown-item" href="{% url 'student-edit-account-notifications' %}">Email Notifications</a>
+                  <a class="dropdown-item" href="{% url 'student-edit-account-password' %}">Account Password</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'student-billing' %}">Subscription</a>
+                  <a class="dropdown-item" href="{% url 'student-billing-upgrade' %}">Upgrade Account</a>
+                  <a class="dropdown-item" href="{% url 'student-billing-payment' %}">Payment Information</a>
+                  <a class="dropdown-item" href="{% url 'student-billing-history' %}">Payment History</a>
+                  <a class="dropdown-item" href="{% url 'student-billing-invoice' %}">Invoice</a>
+              </div>
+          </li>
+          <li class="nav-item dropup">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Components</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="{% url 'ui-buttons' %}">Buttons</a>
+                  <a class="dropdown-item" href="{% url 'ui-charts' %}">Charts</a>
+                  <a class="dropdown-item" href="{% url 'ui-avatars' %}">Avatars</a>
+                  <a class="dropdown-item" href="{% url 'ui-forms' %}">Forms</a>
+                  <a class="dropdown-item" href="{% url 'ui-loaders' %}">Loaders</a>
+                  <a class="dropdown-item" href="{% url 'ui-tables' %}">Tables</a>
+                  <a class="dropdown-item" href="{% url 'ui-cards' %}">Cards</a>
+                  <a class="dropdown-item" href="{% url 'ui-icons' %}">Icons</a>
+                  <a class="dropdown-item" href="{% url 'ui-tabs' %}">Tabs</a>
+                  <a class="dropdown-item" href="{% url 'ui-alerts' %}">Alerts</a>
+                  <a class="dropdown-item" href="{% url 'ui-badges' %}">Badges</a>
+                  <a class="dropdown-item" href="{% url 'ui-progress' %}">Progress</a>
+                  <a class="dropdown-item" href="{% url 'ui-pagination' %}">Pagination</a>
+              </div>
+          </li>
+      </ul>
+      <!-- // END Main Navigation -->
+
+  </div>
+</div>
